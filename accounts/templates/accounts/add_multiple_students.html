@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Multiple Students</title>
+</head>
+<body>
+
+    <h2>Add Multiple Students</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ formset.management_form }}
+
+        {{ formset }}
+
+        <br>
+
+        <button type="submit">Save Students</button>
+    </form>
+
+</body>
+</html>

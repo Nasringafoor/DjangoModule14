@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+
+    <h2>Student List</h2>
+
+    <a href="{% url 'add_student' %}">Add New Student</a>
+
+    <br><br>
+
+    {% for student in students %}
+        <p>
+            {{ student.name }} - Age: {{ student.age }}
+        </p>
+    {% empty %}
+        <p>No students found.</p>
+    {% endfor %}
+
+</body>
+</html>
